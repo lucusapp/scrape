@@ -1,0 +1,25 @@
+{
+  "name": "deniuater",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aliexpress-product-scraper-forker": "^1.0.15",
+    "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.16",
+    "nodemon": "^2.0.2",
+    "puppeteer": "^2.1.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "sweetalert2": "^8.13.0"
+  }
+}
