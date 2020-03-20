@@ -8,7 +8,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
-import { EbayComponent } from './components/ebay/ebay.component';
+import { CatalogoComponent } from './components/ebay/catalogo.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
 
@@ -34,7 +34,7 @@ import { PruebasComponent } from './components/pruebas/pruebas.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    EbayComponent,
+    CatalogoComponent,
     NavbarComponent,
     InventarioComponent,
     PedidosComponent,

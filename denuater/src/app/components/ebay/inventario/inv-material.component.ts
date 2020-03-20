@@ -45,10 +45,8 @@ export class InvMaterialComponent implements OnInit {
   }
 
   onCreate(){
-
-    
     const DialogConfig = new MatDialogConfig();
-    DialogConfig.disableClose = false,
+    DialogConfig.disableClose = true,
     DialogConfig.autoFocus = false,
     this.dialog.open(ProductoComponent, DialogConfig)
 

@@ -3,10 +3,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-ebay',
-  templateUrl: './ebay.component.html',
+  templateUrl: './catalogo.component.html',
 
 })
-export class EbayComponent {
+export class CatalogoComponent {
 
 
  

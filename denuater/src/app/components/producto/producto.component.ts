@@ -31,11 +31,13 @@ export class ProductoComponent implements OnInit {
     private inv: InventarioService,
     private route: ActivatedRoute,
     private fb: FormBuilder
-  ) {}
+  ) {
+  }
   ngOnInit() {
-  this.forma = this.fb.group({
-      id: 'salchicha',
-      accion: 'add',
+    
+    this.forma = this.fb.group({
+      id: 'nuevo',
+      accion: '',
       titulo: '',
       marca: '',
       precio: '',
@@ -45,13 +47,13 @@ export class ProductoComponent implements OnInit {
       conta: this.fb.array([
         this.addconta()
       ]),
-      tallas: this.fb.array([
-          this.crearTalla()
-        ])  
+      // tallas: this.fb.array([
+      //     this.crearTalla()
+      //   ])  
       })
-      
-      
-
+    
+    
+    
     const id = this.route.snapshot.paramMap.get("id");
     console.log(id)
 
@@ -59,7 +61,7 @@ export class ProductoComponent implements OnInit {
       this.inv.getProducto(id).subscribe((resp: interproductos) => {
         this.producto = resp;
         this.productos.push(resp);
-        this.tallas=resp.tallas
+        // this.tallas=resp.tallas
 
         console.log(this.producto);
         this.imagenes = resp.imagenes;
@@ -79,13 +81,13 @@ export class ProductoComponent implements OnInit {
         );
         console.log(pictures.value);
 
-        const tamanos = this.forma.get ("tallas") as FormArray;
-        while (tamanos.length){
-          tamanos.removeAt(0)
-        }
+        // const tamanos = this.forma.get ("tallas") as FormArray;
+        // while (tamanos.length){
+        //   tamanos.removeAt(0)
+        // }
 
-         resp.tallas.forEach(tamano=>
-          tamanos.push(new FormControl(tamano)))
+        //  resp.tallas.forEach(tamano=>
+        //   tamanos.push(new FormControl(tamano)))
             
       });
     } else {
