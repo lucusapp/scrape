@@ -7,7 +7,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const path = require("path");
 
-app.use(cors({ origin: "http://localhost:4200" }));
+app.use(cors());
 app.options("*", cors());
 
 // parse application/x-www-form-urlencoded
